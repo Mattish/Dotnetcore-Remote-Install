@@ -27,3 +27,23 @@ Outputs information regarding state of installation
 #### SYNTAX
 * Install-Dotnetcore [-SSHSession] \<SshSession\>
 * Install-Dotnetcore [-RemoteHost] \<string\> -Username \<string\> -KeyFile \<string\>
+
+
+## Examples
+```
+$remoteHost = "my-sick-nasty-linux-box.io"
+$keyfile = "X:\dontlookinhere\private.rsa"
+
+if((Test-Dotnetcore -RemoteHost $remoteHost -Username "root" -KeyFile $keyfile) -eq $false){
+    Install-Dotnetcore -RemoteHost $remoteHost -Username "root" -KeyFile $keyfile
+}
+```
+#### Output
+```
+Testing for dotnetcore...not installed.
+Detected OS as Ubuntu 16.04 LTS
+Getting dependencies(This can take a while)...Done
+Downloading SDK...Done.
+Testing for dotnetcore install(Might take a while pulling initial nuget cache)...Done
+Success.
+``` 
