@@ -25,5 +25,5 @@ Returns $true if the remote machine successfully can run "dotnetcore --version".
 Outputs information regarding state of installation
 
 #### SYNTAX
-* Install-Dotnetcore [-SSHSession] <SshSession>  [<CommonParameters>]
-* Install-Dotnetcore [-RemoteHost] <string> -Username <string> -KeyFile <string>  [<CommonParameters>]
+* Install-Dotnetcore [-SSHSession] <SshSession>
+* Install-Dotnetcore [-RemoteHost] <string> -Username <string> -KeyFile <string>
