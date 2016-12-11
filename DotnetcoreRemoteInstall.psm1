@@ -42,7 +42,6 @@ function New-LocalSSHSession
     )
     $password = New-Object System.Security.SecureString
     $credentials = New-Object System.Management.Automation.PSCredential ($Username,$password)
-    Write-Host ("Attempting to Deploy " + $ProjectName + " to " + $RemoteHost + "...") -NoNewline
     $sshSession = New-SSHSession -ComputerName $RemoteHost -KeyFile $KeyFile -Credential $credentials -ConnectionTimeout 2000 -AcceptKey
     return $sshSession
 }
@@ -59,7 +58,6 @@ function New-LocalSFTPSession
     )
     $password = New-Object System.Security.SecureString
     $credentials = New-Object System.Management.Automation.PSCredential ($Username,$password)
-    Write-Host ("Attempting to Deploy " + $ProjectName + " to " + $RemoteHost + "...") -NoNewline
     $sshSession = New-SFTPSession -ComputerName $RemoteHost -KeyFile $KeyFile -Credential $credentials -ConnectionTimeout 2000  -AcceptKey
     return $sshSession
 }
@@ -144,3 +142,5 @@ function Install-Dotnetcore
 
 Export-ModuleMember -function Test-Dotnetcore
 Export-ModuleMember -function Install-Dotnetcore
+Export-ModuleMember -function New-LocalSFTPSession
+Export-ModuleMember -function New-LocalSSHSession
