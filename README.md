@@ -17,13 +17,13 @@ Should be fairly simple to add more distributions if needed
 Returns $true if the remote machine successfully can run "dotnetcore --version". Otherwise returns $false
     
 #### SYNTAX
-* Test-Dotnetcore [-SSHSession] <SshSession>
-* Test-Dotnetcore [-RemoteHost] <String> -Username <String> -KeyFile <String>
+* Test-Dotnetcore [-SSHSession] \<SshSession\>
+* Test-Dotnetcore [-RemoteHost] \<String\> -Username \<String\> -KeyFile \<String\>
 
 ### Install-Dotnetcore
 
 Outputs information regarding state of installation
 
 #### SYNTAX
-* Install-Dotnetcore [-SSHSession] <SshSession>
-* Install-Dotnetcore [-RemoteHost] <string> -Username <string> -KeyFile <string>
+* Install-Dotnetcore [-SSHSession] \<SshSession\>
+* Install-Dotnetcore [-RemoteHost] \<string\> -Username \<string\> -KeyFile \<string\>
